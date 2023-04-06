@@ -1,0 +1,14 @@
+.seach__widget, .sorting__widget select {
+    padding: 7px 15px;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.seach__widget input {
+    border: none;
+}
+
+.seach__widget input:focus {
+    outline: none;
+}

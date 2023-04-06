@@ -1,0 +1,49 @@
+import React from 'react';
+import { Row, Col, Container } from 'reactstrap';
+
+import categoryImg01 from '../../../assets/images/category-01.png'
+import categoryImg02 from '../../../assets/images/category-02.png'
+import categoryImg03 from '../../../assets/images/category-03.png'
+import categoryImg04 from '../../../assets/images/category-04.png'
+
+import "../../styles/category.css";
+
+const categoryData = [
+    {
+        display: 'FastFood',
+        imgUrl: categoryImg01,
+    },
+    {
+        display: 'Pizza',
+        imgUrl: categoryImg02,
+    },
+    {
+        display: 'Asian Food',
+        imgUrl: categoryImg03,
+    },
+    {
+        display: 'Raw Meat',
+        imgUrl: categoryImg04,
+    },
+]
+
+const Category = () => {
+    return <Container>
+        <Row>
+            {
+                categoryData.map((data, index) => (
+                    <Col lg='3' md='4' sm='6' xs='6' className='mb-3' key={index}>
+                        <div className="category__item d-flex align-item-center gap-3">
+                            <div className="category__img">
+                                <img src={data.imgUrl} alt="category__item" />
+                            </div>
+                            <h6>{data.display}</h6>
+                        </div>
+                    </Col>
+                ))
+            }
+        </Row>
+    </Container> 
+}
+
+export default Category
